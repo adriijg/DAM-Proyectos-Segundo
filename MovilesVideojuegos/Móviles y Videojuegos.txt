@@ -1,0 +1,8 @@
+Móviles y Videojuegos.
+
+Puntero C.
+Desarrollo nativo: Desarrollado específicamente para esa arquitectura.
+
+Compilado a nativo: Se usan herramientas para crear aplicaciones multiplataforma que luego son compiladas al código nativo de cada plataforma.
+
+Multiplataforma basado en html5: El navegador es el entorno de ejecución, con una pequeña base de datos. Todos los dispositivos tienen un navegador web.
