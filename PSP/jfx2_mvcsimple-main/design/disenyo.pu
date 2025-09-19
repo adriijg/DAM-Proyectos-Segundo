@@ -1,0 +1,21 @@
+@startuml altoNivel
+
+allow_mixing
+
+component vista
+component controller
+component model
+
+interface "Instituto" as inst{
+    +matricular(a:Alumno)
+    +desmatricular(a:Alumno)
+    +listar():List<Alumno>
+}
+
+model ..|> inst
+controller ..> inst
+
+vista ..> controller
+
+
+@enduml

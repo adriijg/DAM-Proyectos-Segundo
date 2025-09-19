@@ -1,0 +1,5 @@
+Acceso a Datos
+
+main (String[] args) -> Parámetro.
+java LeerFichTexto3 hola.txt
+(Leerá lo que contenga el fichero txt.)
