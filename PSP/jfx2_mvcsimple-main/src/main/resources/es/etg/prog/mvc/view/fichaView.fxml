@@ -20,6 +20,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="46.0" minHeight="7.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="Nombre:" />
@@ -27,6 +28,7 @@
             <Button fx:id="btnCrear" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#crear" prefHeight="24.0" prefWidth="54.0" text="Crear" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="txtNombre" GridPane.columnIndex="1" />
             <TextField fx:id="txtApellidos" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="btnListar" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#listar" prefHeight="26.0" prefWidth="53.0" text="Listar" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </children>

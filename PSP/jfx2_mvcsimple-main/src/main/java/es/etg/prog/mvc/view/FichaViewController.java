@@ -33,12 +33,19 @@ public class FichaViewController {
 
         if(camposRellenos()){
             institutoController.crearAlumno(txtNombre.getText(), txtApellidos.getText());
+            txtNombre.setText("");
+            txtApellidos.setText("");
         }else{
             Alert alerta = new Alert(AlertType.ERROR);
             alerta.setTitle(MSG_TITLE);
             alerta.setContentText(MSG_CONTENT);
             alerta.show();
         }
+
+    }
+
+    @FXML
+    void listar(ActionEvent event) {
 
     }
 

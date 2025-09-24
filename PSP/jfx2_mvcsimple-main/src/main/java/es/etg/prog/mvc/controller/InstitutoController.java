@@ -1,6 +1,8 @@
 package es.etg.prog.mvc.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import es.etg.prog.mvc.App;
 import es.etg.prog.mvc.model.Acceso;
@@ -18,7 +20,6 @@ public class InstitutoController extends Application{
 
     // Referencia a la interfaz gráfica para cargarla
     private final static String VIEW_MAIN = "view/fichaView.fxml";
-    private static Scene scene;
 
     //Lógica de negocio (modelo)
     private static Instituto model;
@@ -61,6 +62,10 @@ public class InstitutoController extends Application{
         model.matricular(al);
 
         return al;
+    }
+
+    public List<Alumno> listaAlumnos(){
+        return model.listarAlumnos();
     }
     
 }

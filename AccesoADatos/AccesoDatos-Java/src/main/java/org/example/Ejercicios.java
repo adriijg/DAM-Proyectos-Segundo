@@ -1,16 +1,17 @@
 package org.example;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 
 public class Ejercicios {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 //        System.out.println(ejercicio1());
 //        System.out.println(ejercicio2());
 //        ejercicio3();
-        ejercicio4B();
+//        ejercicio4B();
+//        ejercicio6();
+//        ejercicio7();
+        ejercicio8();
     }
 
     private static String ejercicio1(String[] args) {
@@ -142,9 +143,43 @@ public class Ejercicios {
                 bloque.append(c);
 
                 if (bloque.length() == 30) {
-                    System.out.println(bloque.toString());
+                    System.out.println(bloque);
                     bloque.setLength(0);
                 }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void ejercicio6() throws IOException{
+        String cadena = "Cadena";
+        File f = new File("files/File.txt");
+        FileWriter fw = new FileWriter(f, true);
+        char[] c = cadena.toCharArray();
+        for (int i = 0; i < cadena.length(); i++) {
+            fw.write(c[i]);
+            System.out.println(c[i]);
+        }
+        fw.close();
+    }
+
+    private static void ejercicio7() throws IOException{
+        String[] cosas = {"Casa", "Perro", "Coche"};
+        File f = new File("files/File.txt");
+        FileWriter fw = new FileWriter(f, true);
+        fw.write("\n");
+        for (int i = 0; i < cosas.length; i++) {
+            fw.write(cosas[i]);
+        }
+        fw.close();
+    }
+
+    private static void ejercicio8() {
+        try (BufferedReader br = new BufferedReader(new FileReader("files/File.txt"))){
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea);
             }
         } catch (IOException e) {
             e.printStackTrace();
