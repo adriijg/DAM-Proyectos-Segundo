@@ -3,10 +3,16 @@ package es.etg.prog.mvc.view;
 import es.etg.prog.mvc.controller.InstitutoController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class FichaViewController {
 
@@ -46,7 +52,21 @@ public class FichaViewController {
 
     @FXML
     void listar(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("listaAlumnosView.fxml"));
+            Parent root = loader.load();
 
+            ListaAlumnosController listaController = loader.getController();
+
+            listaController.cargarAlumnos(institutoController.listaAlumnos());
+
+            Stage stage = new Stage();
+            stage.setTitle("Alumnos matriculado");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     private boolean camposRellenos(){
