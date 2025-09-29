@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  grid-template-rows: auto;
+  gap: 10px;
+  background: #f3f2ef;
+}
+
+/* Header */
+header {
+  grid-column: 1 / 4;
+  background: #13c20a;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Sidebars */
+.sidebar-left, .sidebar-right {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-card img {
+  border-radius: 50%;
+}
+
+.profile-card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Main content */
+main {
+  padding: 10px;
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.post-form textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.post-form button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: #13c20a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.post-form button :hover {
+  
+}
+
+.feed .post {
+  background: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.post-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.post-header img{
+  border-radius: 50%;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.post-actions button {
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #0a66c2;
+}
