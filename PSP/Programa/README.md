@@ -1,0 +1,1 @@
+He tenido problemas para crear el programa. 🤟

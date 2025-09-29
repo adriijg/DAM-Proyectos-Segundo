@@ -1,11 +1,10 @@
-package org.tierno.model.db;
-
-import org.tierno.model.Alumno;
+package es.etg.prog.mvc.model.db;
 
 import java.util.List;
 
-public class InstitutoDAOImp extends InstitutoDAO{
+import es.etg.prog.mvc.model.Alumno;
 
+public class InstitutoDAOImp extends InstitutoDAO{
 
     @Override
     public void matricular(Alumno a) {
@@ -21,4 +20,5 @@ public class InstitutoDAOImp extends InstitutoDAO{
     public List<Alumno> listarAlumnos() {
         throw new UnsupportedOperationException("Unimplemented method 'listarAlumnos'");
     }
+    
 }

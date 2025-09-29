@@ -1,12 +1,12 @@
-package org.tierno.model.mock;
-
-import org.tierno.model.Alumno;
-import org.tierno.model.Instituto;
+package es.etg.prog.mvc.model.mock;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InstitutoMock implements Instituto {
+import es.etg.prog.mvc.model.Alumno;
+import es.etg.prog.mvc.model.Instituto;
+
+public class InstitutoMock implements Instituto{
 
     private List<Alumno> lista = new ArrayList<>();
 
@@ -24,4 +24,5 @@ public class InstitutoMock implements Instituto {
     public List<Alumno> listarAlumnos() {
         return lista;
     }
+    
 }

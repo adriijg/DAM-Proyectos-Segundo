@@ -1,4 +1,4 @@
-package org.tierno.model;
+package es.etg.prog.mvc.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Alumno {
+    
     private String nombre;
-    private String apellido;
+    private String apellidos;
     private int edad;
 }
